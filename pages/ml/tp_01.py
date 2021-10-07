@@ -9,9 +9,14 @@ from sklearn.linear_model import LinearRegression
 def app():
     # Add Page Title
     st.title("(ML) TP-01 : Linear Regression Single Variable")
-
+    
     st.write(
-        "In this TD we try and predict the price of house given its area. We also plot the linear regrssion."
+        "In this TD we are taking alook at single variable linear Regression."
+    )
+
+    st.header("Example")
+    st.write(
+        "In this part we try and predict the price of house given its area. We also plot the linear regrssion."
     )
 
     # import the data sets
@@ -46,6 +51,10 @@ def app():
     # Create and fit the linear regression model
     model_prices = LinearRegression()
     model_prices.fit(df_prices[["area"]], df_prices["price"])
+
+    # Check model coefficent and intercept
+    st.write("Coefficient: ", np.round(model_prices.coef_[0], 2))
+    st.write("Intercept: ", np.round(model_prices.intercept_, 2))
 
     fig_prices_02 = plt.figure()
     plt.scatter(x=df_prices["area"], y=df_prices["price"], c="red", marker="+")
@@ -92,7 +101,7 @@ def app():
 
     # Check model coefficent and intercept
     st.write("Coefficient: ", model_canada_pci.coef_[0])
-    st.write("Intercept: ", model_canada_pci.intercept_)
+    st.write("Intercept: ",  np.round(model_canada_pci.intercept_, 2))
 
     # Adding linear regression to scatter plot
     fig_canada_pci_02 = plt.figure()
