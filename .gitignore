@@ -1,3 +1,5 @@
-__pycache__/multiapp.cpython-38.pyc
-pages/__pycache__/
+__pycache__/
 pages/ml/__pycache__/
+Procfile
+requirements_original.txt
+runtime.txt
