@@ -6,7 +6,7 @@ This app is compilation of the TPs I did in my Intro to Machine Learning and Dee
 
 Launch the web app:
 
-[[Streamlit App]](https://ml-and-dl-streamlit-demo-app.herokuapp.com/y)
+[[Streamlit App]](https://ml-and-dl-streamlit-demo-app.herokuapp.com/)
 
 ## Reproducing this web app
 
